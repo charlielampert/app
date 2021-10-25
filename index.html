@@ -1,1 +1,48 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=apple-touch-icon sizes=57x57 href=//favicon.StateTagApps.com/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=//favicon.StateTagApps.com/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=//favicon.StateTagApps.com/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=//favicon.StateTagApps.com/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=//favicon.StateTagApps.com/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=//favicon.StateTagApps.com/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=//favicon.StateTagApps.com/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=//favicon.StateTagApps.com/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=//favicon.StateTagApps.com/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=//favicon.StateTagApps.com/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=//favicon.StateTagApps.com/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=//favicon.StateTagApps.com/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=//favicon.StateTagApps.com/favicon-16x16.png><title>STA HelloWorld</title><link rel=preload href=/css/custom.css as=style><link rel=preload href=/js/sta-config.js as=script><link rel=preload href=/js/sta-state.js as=script><link rel=preload href=/js/sta-socket.js as=script><link rel=preload href=/js/sta-io.js as=script><link rel=stylesheet href=/css/custom.css><script src=/js/sta-config.js></script><script src=/js/sta-state.js></script><script src=/js/sta-socket.js></script><script src=/js/sta-io.js></script><link href=/css/html.css rel=preload as=style><link href=/js/html.js rel=preload as=script><link href=/css/html.css rel=stylesheet></head><body><h1>State Example</h1><code><x-text-html service=state locus=msg></x-text-html></code><p><x-text-html service=state locus=msg.en></x-text-html>,<x-text-html service=state locus=msg.sp></x-text-html>,<x-text-html service=state locus=msg.fr></x-text-html></p><p><i>Please open your browser's dev console to see state watchers firing.</i></p><x-input locus=msg.en></x-input><br><x-input locus=msg.sp></x-input><br><x-input locus=msg.fr></x-input><br><p><a href=index.html>Try reloading, your state changes will persist.</a></p><button onclick="stateTagApp.$execute('resetApp')">reset state</button><hr><h1>API Example</h1><code><x-text-html src=/HelloWorld/TextHtml.json></x-text-html></code><h1><x-text-html src=/HelloWorld/TextHtml.json locus=en></x-text-html>,<x-text-html src=/HelloWorld/TextHtml.json locus=es></x-text-html>,<x-text-html src=/HelloWorld/TextHtml.json locus=fr></x-text-html></h1><hr><h1>Socket Example</h1><x-socket-status>The socket is</x-socket-status>. <code><x-text-html service=socket src=timecast waiting-msg="Waiting for push data to arrive."></x-text-html></code><p><x-text-html service=socket src=timecast locus=stamp></x-text-html></p><script src=/js/html.js></script></body></html>
+<!DOCTYPE html><html lang=en><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name=viewport content="width=device-width,user-scalable=no"><meta name=apple-mobile-web-app-capable content=yes><link rel=icon href=/icons/favicon.ico type=image/x-icon><link rel=apple-touch-icon sizes=57x57 href=/icons/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/icons/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/icons/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/icons/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/icons/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/icons/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/icons/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/icons/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=/icons/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=/icons/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png><meta name=msapplication-TileColor content=#ffffff><meta name=msapplication-TileImage content=/icons/ms-icon-144x144.png><meta name=theme-color content=#ffffff><script src=/js/qrcode.min.js></script><script src=/js/browser-image-compression.js></script><link rel=preload href=/css/custom.css as=style><link rel=preload href=/js/sta-config.js as=script><link rel=preload href=/js/sta-state.js as=script><link rel=preload href=/js/sta-socket.js as=script><link rel=preload href=/js/sta-io.js as=script><link rel=stylesheet href=/css/custom.css><script src=/js/sta-config.js></script><script src=/js/sta-state.js></script><script src=/js/sta-socket.js></script><script src=/js/sta-io.js></script><script>function showPanel(elementId) {
+            var el = document.getElementById(elementId);
+            el.style.display = 'block';
+        }
+
+        function hidePanel(elementId) {
+            var el = document.getElementById(elementId);
+            el.style.display = 'none';
+        }
+
+        function fillDot() {
+            var el = document.getElementsByClassName('circle')[0];
+            el.classList.add('dot');
+            el.classList.remove("circle");
+        }
+
+        function clearDots() {
+            var els = document.getElementsByClassName('dot');
+            var i = els.length * 1 - 1;
+            while (i >= 0) {
+                els[i].classList.add('circle');
+                els[i].classList.remove('dot');
+                --i;
+            }
+        }
+
+        function injestImage(el) {
+            let path = el.files[0];
+            var reader = new FileReader();
+
+            var options = {
+                maxSizeMB: 1,
+                maxWidthOrHeight: 1000,
+                useWebWorker: true
+            }
+
+            imageCompression(path, options)
+            .then(function(compressed){
+                var reader = new FileReader();
+                reader.onloadend = function() {
+                    stateTagApp.$write('pics.mugShot', reader.result);
+                }
+                reader.readAsDataURL(compressed);
+            });
+        }</script><link rel=manifest href=manifest.json><title>VaxWallet&TRADE;</title><meta http-equiv=Cache-Control content="no-cache, no-store, must-revalidate"><meta http-equiv=Pragma content=no-cache><meta http-equiv=Expires content=0><link href=/css/html.css rel=preload as=style><link href=/js/html.js rel=preload as=script><link href=/css/html.css rel=stylesheet></head><body><div id=page><div id=banner><a id=logo href=https://www.who.int/emergencies/diseases/novel-coronavirus-2019 target=_blank><vax-image locus=pics.logo></vax-image></a><div id=title><h1>SARS COVID 19</h1><h2>Wallet Epoc ::<vax-text-html service=socket src=timecast locus=stamp></vax-text-html></h2></div></div><vax-qrcode :key=componentKey></vax-qrcode><div id=dots><span class=circle></span> <span class=circle></span> <span class=circle></span> <span class=circle></span></div><div id=keypad><button onclick="fillDot('1')">1</button> <button onclick="fillDot('2')">2</button> <button onclick="fillDot('3')">3</button> <button onclick="fillDot('4')">4</button> <button onclick="fillDot('5')">5</button> <button onclick="fillDot('6')">6</button> <button onclick="fillDot('7')">7</button> <button onclick="fillDot('8')">8</button> <button onclick="fillDot('9')">9</button> <button onclick=clearDots()>&chi;</button> <button onclick="fillDot('0')">0</button> <button onclick="showPanel('records')">&check;</button></div><input type=hidden id=passcode></div><div id=records><button onclick="hidePanel('records');">&chi;</button><h1><vax-text-html service=state locus=txt.firstName></vax-text-html><vax-text-html service=state locus=txt.lastName></vax-text-html></h1><vax-image locus=pics.mugShot></vax-image><vax-image locus=pics.qrCheck></vax-image><button onclick="showPanel('config');">&#9881;</button></div><div id=config><button onclick="window.location.href=window.location.href">&check;</button><p>Please enter your vaccine information. Please note that it may be some kind of crime to use this system to show false information to people.</p><h1>Basic Info</h1><div class=field><span>First Name:</span> <span><vax-input with-button=false locus=txt.firstName></vax-input></span></div><div class=field><span>Last Name:</span> <span><vax-input with-button=false locus=txt.lastName></vax-input></span></div><div class=field><span>DOB:</span> <span><vax-input with-button=false locus=txt.dob type=date></vax-input></span></div><div class=field><span>Gender:</span> <span>&nbsp; <input type=radio name=gender id=Male onclick="stateTagApp.$write('txt.gender', 'Male')"> <label for=Male>Male</label> &nbsp;<input type=radio name=gender id=Female onclick="stateTagApp.$write('txt.gender', 'Female')"> <label for=Female>Female</label></span></div><h1>Selfie</h1><div onclick="document.getElementById('imageCapture').click();" id=selfie><vax-image height=100px locus=pics.mugShot></vax-image><div>Change</div></div><h1>Doses</h1><vax-doses></vax-doses><input id=imageCapture style="visibility: hidden;" type=file accept=image/* capture=user onchange=injestImage(this)></div><script>document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById(stateTagApp.$read('txt.gender'))
+            .setAttribute('checked', true);
+    });</script><script src=/js/html.js></script></body></html>

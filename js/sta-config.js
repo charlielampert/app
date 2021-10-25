@@ -1,6 +1,6 @@
 const stateTagApp = {
-    namespace: 'x',
-    disk: [localStorage, sessionStorage][1],
+    namespace: 'vax',
+    disk: [localStorage, sessionStorage][0],
     log: console.log,
 
     format: {
@@ -8,8 +8,8 @@ const stateTagApp = {
     },
 
     api: {
-        production: "https://data.StateTagApps.com",
-        development: "https://data.StateTagApps.com"
+        production: "https://processor.vax-wallet.com",
+        development: "https://processor.vax-wallet.test"
     },
 
     //optional
