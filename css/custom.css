@@ -82,6 +82,8 @@ body {
     grid-area: verification;
     justify-self: center;
     position: absolute;
+    top: 0px;
+    left: calc(50% - 50px);
 }
 
 #logo {
