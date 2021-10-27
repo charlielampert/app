@@ -1,12 +1,21 @@
 * {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
+
+    margin: 0;
+    padding: 0;
+}
+
+input, select, .field {
+    padding: 7px;
 }
 
 body {
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
+
+    font-family: Lato;
 }
 
 @font-face {
@@ -25,10 +34,6 @@ body {
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-body {
-    font-family: Lato;
-}
-
 
 @media (orientation: landscape) {
     body {
@@ -38,11 +43,6 @@ body {
     body * {
         display: none !important;
     }
-}
-
-* {
-    margin: 0;
-    padding: 0;
 }
 
 #page {
@@ -60,8 +60,8 @@ body {
     grid-template-areas:
             "banner"
             "qrcode"
-            "dots"
             "."
+            "dots"
             "keypad";
 
     height: 100vh;
@@ -72,10 +72,16 @@ body {
 
     display: grid;
     grid-template-areas:
+            "verification verification"
             "logo title";
 
     border-bottom: 1px solid #2980d3;
     overflow-y: hidden;
+}
+#verification{
+    grid-area: verification;
+    justify-self: center;
+    position: absolute;
 }
 
 #logo {
@@ -123,12 +129,10 @@ body {
 #dots {
     grid-area: dots;
     justify-self: center;
-
     display: grid;
     grid-auto-flow: column;
     grid-column-gap: 2em;
     grid-auto-columns: 20px;
-
 }
 
 #dots > * {
@@ -148,11 +152,11 @@ body {
 
     display: grid;
 
-    grid-template-columns: 75px 75px 75px;
+    grid-template-columns: 10vh 10vh 10vh;
 }
 
 #keypad > * {
-    height: 75px;
+    height: 10vh;
 
     font-size: 2em;
     color: #999999;
@@ -180,26 +184,29 @@ body {
 #config{
     display: none;
     width: 100vw;
-    height: calc(100vh - 100px);
     position: absolute;
-    overflow: hidden;
     top: 100px;
     text-align: center;
 }
 #records{
-    background: #8fee8f;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    background-color: white;
 }
 #config{
+    min-height: calc(100vh - 100px);
     background: #5dbbe6;
 }
 
 #records h1 {
     text-align: center;
+    background-color: #8fee8f;
+    padding-bottom: 7px;
 }
 
-#records button:first-of-type,
-#config button:first-of-type,
-#records button:last-of-type{
+#records > button:first-of-type,
+#config > button:first-of-type,
+#records > button:last-of-type{
     position: absolute;
     right: 14px;
     border: none;
@@ -209,12 +216,12 @@ body {
 }
 
 
-#records button:first-of-type,
-#config button:first-of-type{
+#records > button:first-of-type,
+#config > button:first-of-type{
     color: #999999;
     font-size: 2em;
 }
-#records button:last-of-type{
+#records > button:last-of-type{
     bottom: 14px;
     color: #999999;
     font-size: 4em;
@@ -224,22 +231,23 @@ body {
 #records vax-image:first-of-type img{
     object-fit: contain;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
 }
 #records vax-image:last-of-type img{
     position: relative;
-    top: -175px;
+    top: -110px;
 }
 
 .field span{
     display: inline-block;
-    width: 50%;
 }
 .field span:first-of-type{
+    width: 30%;
     float: left;
     text-align: right;
 }
 .field span:last-of-type{
+    width: 70%;
     float: right;
     text-align: left;
 }

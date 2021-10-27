@@ -7,6 +7,7 @@ NETWORK: *
 CACHE:
 /css/custom.css
 /css/html.css
+/css/sweetalert2.min.css
 /fonts/latin-ext.woff2
 /fonts/latin.woff2
 /icons/android-icon-36x36.png
@@ -43,6 +44,7 @@ CACHE:
 /js/sta-io.js
 /js/sta-socket.js
 /js/sta-state.js
+/js/sweetalert2.min.js
 /index.html
 /manifest.json
 

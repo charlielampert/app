@@ -8,8 +8,13 @@ const stateTagApp = {
     },
 
     api: {
-        production: "https://processor.vax-wallet.com",
-        development: "https://processor.vax-wallet.test"
+        production: "https://cc.vax-wallet.com",
+        development: "http://laptop.xxx"
+    },
+
+    pay: {
+        production: "pk_live_qzMHazgTz3An7ztovJc9IlUX",
+        development: "pk_test_o62iMdPuazIncg2QRD6nv2eL"
     },
 
     //optional
