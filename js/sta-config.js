@@ -13,8 +13,8 @@ const stateTagApp = {
     },
 
     pay: {
-        production: "pk_test_o62iMdPuazIncg2QRD6nv2eL",
-        development: "pk_live_qzMHazgTz3An7ztovJc9IlUX"
+        production: "pk_live_qzMHazgTz3An7ztovJc9IlUX",
+        development: "pk_test_o62iMdPuazIncg2QRD6nv2eL"
     },
 
     //optional
