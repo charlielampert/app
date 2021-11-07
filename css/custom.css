@@ -6,9 +6,7 @@
     padding: 0;
 }
 
-input, select, .field {
-    padding: 7px;
-}
+
 
 body {
     -webkit-user-select: none;
@@ -240,37 +238,28 @@ body {
     top: -110px;
 }
 
-.field span{
-    display: inline-block;
-}
-.field span:first-of-type{
-    width: 30%;
-    float: left;
-    text-align: right;
-}
-.field span:last-of-type{
-    width: 70%;
-    float: right;
-    text-align: left;
-}
-
-.field{
-    display: block;
-    clear: both;
-}
-
 #config h1{
     margin-top: 1em;
 }
 
 vax-dose div{
-    margin-bottom: 0.7em;
-}
-vax-dose div input,
-vax-dose div select{
-    width: 200px;
+    /*margin-bottom: 0.7em;*/
 }
 
-vax-input input{
-    width: 200px;
+.input-group{
+     width: 50vw !important;
+     margin: auto;
+     margin-bottom:  7px;
+ }
+
+.form-control > *{
+    width: 100%;
+}
+
+/*input{
+    border: none;
+}*/
+
+.input-group-text{
+    width: 100px;
 }
