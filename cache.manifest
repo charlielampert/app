@@ -6,6 +6,7 @@ NETWORK: *
 
 CACHE:
 /css/bootstrap.min.css
+/css/csshake.min.css
 /css/custom.css
 /css/html.css
 /css/sweetalert2.min.css
