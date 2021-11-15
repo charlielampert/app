@@ -146,6 +146,10 @@ body {
     background-color: #dddddd;
 }
 
+.error .dot {
+    background-color: red !important;
+}
+
 #keypad {
 
     grid-area: keypad;
