@@ -81,7 +81,8 @@ body {
     justify-self: center;
     position: absolute;
     top: 0px;
-    left: calc(50% - 50px);
+    width: 140px;
+    right: calc(50% - 70px);
 }
 
 #logo {
@@ -196,6 +197,8 @@ body {
 #config{
     min-height: calc(100vh - 100px);
     background: #5dbbe6;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 #records h1 {
@@ -219,7 +222,18 @@ body {
 #records > button:first-of-type,
 #config > button:first-of-type{
     color: #999999;
-    font-size: 2em;
+    /*font-size: 2em;*/
+
+    border: 2px solid #999999;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+#records > button:first-of-type{
+
 }
 #records > button:last-of-type{
     bottom: 14px;
@@ -242,15 +256,14 @@ body {
     margin-top: 1em;
 }
 
-vax-dose div{
-    /*margin-bottom: 0.7em;*/
-}
-
 .input-group{
-     width: 50vw !important;
-     margin: auto;
-     margin-bottom:  7px;
+    flex-wrap: nowrap;
+    margin-bottom:  7px;
  }
+
+.form-control{
+    width: 100%;
+}
 
 .form-control > *{
     width: 100%;
