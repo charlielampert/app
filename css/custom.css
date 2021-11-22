@@ -106,6 +106,7 @@ body {
 #title h1{
     white-space: nowrap;
     font-size: 3.5vw;
+    margin-bottom: 0px;
 }
 #title h2{
     white-space: nowrap;
