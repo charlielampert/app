@@ -114,6 +114,8 @@ body {
 
 #qrcode {
     grid-area: qrcode;
+
+    display: grid;
     justify-items: center;
     width: 100%;
     height: 100%;
@@ -124,7 +126,6 @@ body {
     object-fit: contain;
     height: 100%;
     max-width: 80%;
-    margin:auto;
 }
 
 #dots {
