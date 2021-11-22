@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-#build# 1.08
+#build# 1.09
 
 NETWORK: *
 
@@ -40,7 +40,6 @@ CACHE:
 /icons/ms-icon-310x310.png
 /js/browser-image-compression.js
 /js/html.js
-/js/html.js.map
 /js/qrcode.min.js
 /js/sta-config.js
 /js/sta-io.js
