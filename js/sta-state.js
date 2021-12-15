@@ -17,12 +17,12 @@ stateTagApp['state'] = {
         {
             date: '2021-02-07',
             company: 'Moderna',
-            lot: 'Lot: 013M20A BUD 2/3 1800',
+            lot: '013M20A BUD 2/3 1800',
         },
         {
             date: '2021-03-02',
             company: 'Moderna',
-            lot: 'Lot: 0321L20A BUD 2/3 1800',
+            lot: '0321L20A BUD 2/3 1800',
         }
     ],
 
